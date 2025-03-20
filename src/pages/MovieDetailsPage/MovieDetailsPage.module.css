@@ -1,0 +1,65 @@
+.container {
+  padding: 20px;
+}
+
+.backButton {
+  display: inline-block;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.backButton:hover {
+  text-decoration: underline;
+}
+
+.movieDetails {
+  display: flex;
+  gap: 20px;
+}
+
+.poster {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info {
+  max-width: 600px;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.overview {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.subTitle {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.links {
+  list-style: none;
+  padding: 0;
+}
+
+.link {
+  display: inline-block;
+  margin-right: 15px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.loading {
+  font-size: 18px;
+  color: #888;
+}

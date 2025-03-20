@@ -1,14 +1,7 @@
-// import { useState, useEffect } from "react";
-// import { nanoid } from "nanoid";
-// import ContactForm from "../ContactForm/ContactForm";
-// import SearchBox from "../SearchBox/SearchBox";
-// import ContactList from "../ContactList/ContactList";
-// import styles from "./App.module.css";
-
-// export default function App() {
 import { Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import Navigation from "./components/Navigation/Navigation";
+import styles from "./App.module.css";
 
 const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
 const MoviesPage = lazy(() => import("./pages/MoviesPage/MoviesPage"));
@@ -24,9 +17,9 @@ const MovieReviews = lazy(() =>
 
 export default function App() {
   return (
-    <>
+    <div className={styles.appContainer}>
       <Navigation />
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<div className={styles.loader}>Loading...</div>}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/movies" element={<MoviesPage />} />
@@ -37,6 +30,6 @@ export default function App() {
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Suspense>
-    </>
+    </div>
   );
 }
